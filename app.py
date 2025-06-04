@@ -1,16 +1,16 @@
 import gradio as gr
 
-def analyse_youtube(text):
+def analyse_video(text):
     return {'text': text, 'analysis': 'This is a dummy analysis of the text.'}
 
-demo = gr.Interface(
-    fn=analyse_youtube,
+server = gr.Interface(
+    fn=analyse_video,
     inputs=gr.Textbox(placeholder="Enter text to analyze..."),
     outputs=gr.JSON(),
-    title="Text Youtube Analysis",
-    description="Analyze the Youtube of text using an agent"
+    title="Text video Analysis",
+    description="Analyze the video of text using an agent"
 )
 
 if __name__ == "__main__":
-    demo.launch(mcp_server=True)
+    server.launch(mcp_server=True)
 
